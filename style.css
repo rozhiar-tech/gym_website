@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #12121e;
+  color: white;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  margin-left: 200px;
+  margin-top: 40px;
+  align-items: center;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar ul {
+  display: flex;
+  list-style-type: none;
+  margin-left: 200px;
+  width: 500px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul li {
+  font-size: 24px;
+}
+.login {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+}
+
+.login li {
+  margin-right: 20px;
+}
+
+.login_button {
+  width: 130px;
+  height: 70px;
+  text-align: center;
+  padding-top: 24px;
+  background-color: #7165f9;
+  border-radius: 24px;
+  font-size: 20px;
+}
+.navLink {
+  display: inline-block;
+  padding: 10px 20px;
+  position: relative;
+}
+
+.navLink:hover .hoverBox {
+  display: block;
+}
+
+.hoverBox {
+  display: none;
+  position: absolute;
+  background-color: #7165f9;
+
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 7px;
+  border-radius: 24px;
+}
+
+.section1 {
+  width: 100%;
+  height: 700px;
+  padding: 200px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.headerText {
+  font-size: 50px;
+  font-weight: bold;
+  width: 400px;
+}
+
+.headerSub {
+  font-size: 15px;
+  margin-top: 35px;
+}
+.searchContainer {
+  display: flex;
+  align-items: center;
+  margin-top: 35px;
+}
+
+.searchInput {
+  background-color: #232235;
+  padding: 10px;
+
+  border-radius: 12px;
+  flex-grow: 0.2;
+}
+
+.searchButton {
+  padding: 10px 20px;
+  background-color: #5447fd;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  margin-left: 10px;
+  cursor: pointer;
+  height: 60px;
+  width: 120px;
+}
+
+.parent {
+  width: 1200px;
+  height: 1000px;
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  background-color: transparent;
+  top: -100px;
+  left: -550px;
+}
+
+.child {
+  width: 1200px;
+  height: 1000px;
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  background-color: transparent;
+  top: -400px;
+  left: -1000px;
+}
+.image_container {
+  max-width: 550px;
+  height: 900px;
+  overflow: hidden;
+  border-radius: 24px;
+  position: absolute;
+  right: 100px;
+  top: 270px;
+}
+
+.img {
+  width: 100%;
+  height: auto;
+  border-radius: 24px;
+}
+
+.behind {
+  width: 700px;
+  height: 200px;
+  background-color: #23213d;
+  position: absolute;
+  right: 0;
+  top: 390px;
+  z-index: -1;
+}
