@@ -145,7 +145,7 @@ ul li {
 }
 .image_container {
   max-width: 550px;
-  height: 900px;
+  height: 400px;
   overflow: hidden;
   border-radius: 24px;
   position: absolute;
@@ -167,4 +167,128 @@ ul li {
   right: 0;
   top: 390px;
   z-index: -1;
+}
+
+.floating_card {
+  position: absolute;
+  height: 300px;
+  width: 200px;
+  background-color: #5447fd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 410px;
+  right: 500px;
+  border-radius: 12px;
+}
+
+.floatingText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.floatingText p {
+  color: #fff;
+  background-color: #5447fd;
+  font-size: larger;
+  font-weight: 900;
+}
+
+.secondSection {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.content1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  width: 400px;
+  margin-right: 150px;
+}
+.insideText {
+  font-size: 20px;
+  color: grey;
+}
+.insideText2 {
+  font-size: 35px;
+  color: white;
+}
+.text {
+  margin-bottom: 40px;
+}
+.imagee {
+  height: 420px;
+  width: 350px;
+  border-radius: 12px;
+}
+
+.content2 {
+  border-radius: 12px;
+}
+
+.custom-button {
+  background-color: #5447fd;
+  color: white;
+  border: none;
+  border-radius: 8px; /* Adjust the border-radius value to change the roundness */
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+}
+
+.custom-button:hover {
+  background-color: #3c35b5; /* Adjust hover color if desired */
+}
+
+.card {
+  position: relative;
+  width: 300px; /* Adjust width as needed */
+  height: 200px; /* Adjust height as needed */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #1a192a;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.fade-number {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  font-weight: bold;
+  color: grey; /* Fading number color */
+  background-color: transparent;
+}
+
+.text-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 15%;
+  background-color: transparent;
+}
+
+.textt {
+  font-size: 18px;
+  margin: 5px 0;
+  background-color: transparent;
+}
+
+.content3 {
+  margin-left: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
