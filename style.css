@@ -292,3 +292,189 @@ ul li {
   align-items: center;
   justify-content: space-around;
 }
+
+/* ... Testimoneal ... */
+
+.user-feedback {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: row; /* Change to row to align section elements horizontally */
+  justify-content: space-around;
+  align-items: center; /* Align items at the top of the row */
+  text-align: center;
+  flex-wrap: wrap; /* Allow items to wrap if they exceed the width */
+  height: 900px;
+  /* background-color: red; */
+}
+.testimonial-heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: start;
+}
+
+.testimonial-cards {
+  display: flex;
+  flex-direction: column; /* Change to column for testimonial cards */
+
+  margin-top: 40px;
+
+  /* width: 200px; */
+}
+
+.user-feedback h2 {
+  font-size: 35px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.user-feedback p {
+  font-size: 18px;
+  color: #ccc;
+}
+
+.contact-btn {
+  background-color: #5447fd;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.contact-btn:hover {
+  background-color: #3c35b5;
+}
+
+.testimonial-cards {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.testimonial-card {
+  width: 600px;
+  height: 200px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  background-color: #1a192a;
+  margin: 0 20px;
+  text-align: center;
+  display: flex;
+  margin-bottom: 20px;
+}
+.card1 {
+  margin-left: 60px;
+}
+.card2 {
+  margin-left: 60px;
+}
+.testimonial-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  /* margin-bottom: 8px; */
+}
+
+.testimonial-card p {
+  color: white;
+  font-size: 16px;
+}
+
+.user-name {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Adjust positioning for individual cards */
+.testimonial-cards .testimonial-card:first-child {
+  margin-right: 60px;
+}
+
+.testimonial-cards .testimonial-card:last-child {
+  margin-left: 60px;
+}
+
+/* ... previous CSS code ... */
+
+/* Styles for the contact dialog */
+.contact-dialog {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-dialog-content {
+  background-color: #12121e;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* ... previous CSS code ... */
+
+.contact-dialog-content form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-dialog-content label {
+  color: white;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.contact-dialog-content input[type="text"],
+.contact-dialog-content input[type="email"],
+.contact-dialog-content textarea {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: white;
+  color: #12121e;
+}
+
+.contact-dialog-content input[type="submit"] {
+  width: 50%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #5447fd;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.contact-dialog-content input[type="submit"]:hover {
+  background-color: #3c35b5;
+}
