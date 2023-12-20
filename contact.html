@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Contact Qaiwan Fitness Center</title>
+    <style>
+      body {
+        background-color: #12121e; /* Modified background color */
+        color: white;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      form {
+        width: 100%;
+        max-width: 400px;
+        padding: 20px;
+        background-color: #1f1f33; /* Modified form background color */
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      }
+      input[type="email"],
+      input[type="password"],
+      input[type="text"],
+      input[type="tel"] {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: none;
+        border-bottom: 2px solid #555;
+        background-color: transparent;
+        color: white;
+        font-size: 16px;
+      }
+      input[type="submit"] {
+        background-color: #3f51b5; /* Modified submit button color */
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        background-color: #303f9f; /* Modified hover color */
+      }
+    </style>
+  </head>
+  <body>
+    <form class="max-w-md mx-auto">
+      <input
+        type="email"
+        name="floating_email"
+        id="floating_email"
+        placeholder="Email address"
+        required
+      />
+      <input
+        type="password"
+        name="floating_password"
+        id="floating_password"
+        placeholder="Password"
+        required
+      />
+      <input
+        type="password"
+        name="repeat_password"
+        id="floating_repeat_password"
+        placeholder="Confirm password"
+        required
+      />
+      <input
+        type="text"
+        name="floating_first_name"
+        id="floating_first_name"
+        placeholder="First name"
+        required
+      />
+      <input
+        type="text"
+        name="floating_last_name"
+        id="floating_last_name"
+        placeholder="Last name"
+        required
+      />
+      <input
+        type="tel"
+        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+        name="floating_phone"
+        id="floating_phone"
+        placeholder="Phone number (123-456-7890)"
+        required
+      />
+      <input
+        type="text"
+        name="floating_company"
+        id="floating_company"
+        placeholder="Company (Ex. Google)"
+        required
+      />
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
