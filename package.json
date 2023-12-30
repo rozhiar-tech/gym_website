@@ -1,0 +1,16 @@
+{
+  "name": "gym_website",
+  "version": "1.0.0",
+  "description": "gym website",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kaiwan",
+  "license": "ISC",
+  "dependencies": {
+    "firebase": "^10.7.1",
+    "toastify-js": "^1.12.0"
+  }
+}

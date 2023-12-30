@@ -9,11 +9,12 @@
 .container {
   display: flex;
   flex-direction: column;
+  margin:auto;
+
 }
 
 .header {
   display: flex;
-  margin-left: 200px;
   margin-top: 40px;
   align-items: center;
 }
@@ -100,18 +101,37 @@ ul li {
   display: flex;
   align-items: center;
   margin-top: 35px;
+  width: 75%;
+  z-index: 2;
 }
 
 .searchInput {
   background-color: #232235;
   padding: 10px;
-
   border-radius: 12px;
   flex-grow: 0.2;
 }
 
+/* CSS for column form */
+.column-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Additional styling for the form elements if needed */
+.column-form input[type="email"],
+.column-form input[type="password"],
+.column-form button {
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+
 .searchButton {
-  padding: 10px 20px;
+  padding: 10px 10px;
   background-color: #5447fd;
   color: #fff;
   border: none;
@@ -152,6 +172,26 @@ ul li {
   right: 100px;
   top: 270px;
 }
+@media only screen and (max-width: 768px) {
+  .header {
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .navbar {
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .navbar ul {
+    flex-direction: row; /* Revert to horizontal layout for larger screens */
+    justify-content: flex-end; /* Adjust alignment for larger screens */
+    margin: 0; /* Reset margin for larger screens */
+  }
+
+  .navbar ul li {
+    margin: 0 10px; /* Adjust margin for larger screens */
+  }
+}
+
 
 .img {
   width: 100%;
@@ -242,9 +282,29 @@ ul li {
   cursor: pointer;
   outline: none;
 }
-
+.custom-button2 {
+  background-color: #5447fd;
+  color: white;
+  border: none;
+  border-radius: 8px; /* Adjust the border-radius value to change the roundness */
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+}
 .custom-button:hover {
   background-color: #3c35b5; /* Adjust hover color if desired */
+}
+.email-form input[type="email"] {
+  background-color: #fff;
+  border: 1px solid #5447fd;
+  border-radius: 8px; /* Same border-radius as the button */
+  padding: 10px 15px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  outline: none;
+  margin-right: 6px;
+  margin-top: 6px;
 }
 
 .card {
