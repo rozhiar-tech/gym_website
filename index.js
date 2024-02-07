@@ -1,8 +1,18 @@
-import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js'
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
 
-import { getAuth,signInWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/10.7.0/firebase-auth.js'
-import { getFirestore,collection, query, where, getDocs,addDoc } from 'https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js'
-// import Toastify from 'toastify-js' 
+import {
+  getAuth,
+  signInWithEmailAndPassword,
+} from "https://www.gstatic.com/firebasejs/10.7.0/firebase-auth.js";
+import {
+  getFirestore,
+  collection,
+  query,
+  where,
+  getDocs,
+  addDoc,
+} from "https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js";
+// import Toastify from 'toastify-js'
 
 // Your Firebase configuration
 const firebaseConfig = {
@@ -13,15 +23,13 @@ const firebaseConfig = {
   storageBucket: "gymw-c97a4.appspot.com",
   messagingSenderId: "905248809906",
   appId: "1:905248809906:web:95278663ecb387344dbaab",
-  measurementId: "G-VQNVRT930G"
+  measurementId: "G-VQNVRT930G",
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
-const firestore = getFirestore(app)
-
-
+const firestore = getFirestore(app);
 
 // JavaScript to toggle the contact dialog
 const contactBtn = document.querySelector(".contact-btn");
@@ -47,10 +55,8 @@ const loginForm = document.getElementById("loginForm");
 
 loginButton.addEventListener("click", () => {
   loginForm.style.display = "block"; // Show the login form when the button is clicked
-  loginForm.style.zIndex="2";
+  loginForm.style.zIndex = "2";
 });
-
-
 
 // Handling form submission
 const userLoginForm = document.getElementById("userLoginForm");
@@ -69,7 +75,6 @@ userLoginForm.addEventListener("submit", (e) => {
       console.log("Logged in:", user);
       // Add your actions after successful login here
       window.location.href = "dashboard.html";
-
     })
     .catch((error) => {
       // Handle login errors
@@ -81,22 +86,21 @@ userLoginForm.addEventListener("submit", (e) => {
   loginForm.style.display = "none";
 });
 
-
 // Function to create a small window to display offer details
 // Function to create a small window to display offer details
 function displayOfferDetails(offerData) {
   // Create a div element for the offer details
-  const detailsContainer = document.createElement('div');
-  detailsContainer.classList.add('offer-details'); // Apply styles as needed
+  const detailsContainer = document.createElement("div");
+  detailsContainer.classList.add("offer-details"); // Apply styles as needed
 
   // Create elements to display offer details (modify as per your data structure)
-  const nameElement = document.createElement('p');
+  const nameElement = document.createElement("p");
   nameElement.textContent = `Name: ${offerData.Name}`;
 
-  const descriptionElement = document.createElement('p');
+  const descriptionElement = document.createElement("p");
   descriptionElement.textContent = `Description: ${offerData.Description}`;
-  const price = document.createElement('p');
-  price.textContent=`Price: ${offerData.Price} $`;
+  const price = document.createElement("p");
+  price.textContent = `Price: ${offerData.Price} $`;
 
   // Add the elements to the container
   detailsContainer.appendChild(nameElement);
@@ -107,18 +111,18 @@ function displayOfferDetails(offerData) {
   document.body.appendChild(detailsContainer); // Change to a different parent element if needed
 
   // Center the details container in the middle of the screen
-  detailsContainer.style.position = 'fixed';
-  detailsContainer.style.top = '50%';
-  detailsContainer.style.left = '50%';
-  detailsContainer.style.transform = 'translate(-50%, -50%)';
-  detailsContainer.style.background = '#fff'; // Set background color
+  detailsContainer.style.position = "fixed";
+  detailsContainer.style.top = "50%";
+  detailsContainer.style.left = "50%";
+  detailsContainer.style.transform = "translate(-50%, -50%)";
+  detailsContainer.style.background = "#fff"; // Set background color
   // detailsContainer.style.padding = '20px'; // Add padding for content
 
   // Set dimensions and other styles for the container
-  detailsContainer.style.width = '300px'; // Set width
-  detailsContainer.style.height = '196px'; // Set height
-  detailsContainer.style.border = '2px solid #ccc'; // Add border
-  detailsContainer.style.borderRadius = '8px'; // Add border radius
+  detailsContainer.style.width = "300px"; // Set width
+  detailsContainer.style.height = "196px"; // Set height
+  detailsContainer.style.border = "2px solid #ccc"; // Add border
+  detailsContainer.style.borderRadius = "8px"; // Add border radius
 }
 
 // Rest of your code remains unchanged...
@@ -126,9 +130,9 @@ function displayOfferDetails(offerData) {
 // Function to perform search
 const offersRef = collection(firestore, "Offers");
 
-window.searchOffer = async function() {
+window.searchOffer = async function () {
   const searchTerm = document.getElementById("searchInput").value.trim();
-  
+
   const q = query(offersRef, where("Name", "==", searchTerm));
 
   try {
@@ -143,7 +147,6 @@ window.searchOffer = async function() {
     console.error("Error searching for offer:", error);
   }
 };
-
 
 const joinCommunityButton = document.getElementById("joinCommunityBtn");
 const content1Div = document.querySelector(".content1");
@@ -180,7 +183,7 @@ joinCommunityButton.addEventListener("click", () => {
             style: {
               background: "linear-gradient(to right, #00b09b, #96c93d)",
             },
-            onClick: function(){} // Callback after click
+            onClick: function () {}, // Callback after click
           }).showToast();
           formContainer.style.display = "none"; // Hide the form after submission
         })

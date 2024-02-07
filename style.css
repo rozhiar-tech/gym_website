@@ -9,8 +9,7 @@
 .container {
   display: flex;
   flex-direction: column;
-  margin:auto;
-
+  margin: auto;
 }
 
 .header {
@@ -129,7 +128,6 @@ ul li {
   border: 1px solid #ccc;
 }
 
-
 .searchButton {
   padding: 10px 10px;
   background-color: #5447fd;
@@ -191,7 +189,6 @@ ul li {
     margin: 0 10px; /* Adjust margin for larger screens */
   }
 }
-
 
 .img {
   width: 100%;
@@ -297,6 +294,7 @@ ul li {
 }
 .email-form input[type="email"] {
   background-color: #fff;
+  color: black;
   border: 1px solid #5447fd;
   border-radius: 8px; /* Same border-radius as the button */
   padding: 10px 15px;
