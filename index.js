@@ -53,10 +53,7 @@ window.addEventListener("click", (event) => {
 const loginButton = document.getElementById("loginButton");
 const loginForm = document.getElementById("loginForm");
 
-loginButton.addEventListener("click", () => {
-  loginForm.style.display = "block"; // Show the login form when the button is clicked
-  loginForm.style.zIndex = "2";
-});
+loginButton.addEventListener("click", () => {});
 
 // Handling form submission
 const userLoginForm = document.getElementById("userLoginForm");
@@ -201,4 +198,26 @@ joinCommunityButton.addEventListener("click", () => {
 
   // Hide the button after showing the email form
   // joinCommunityButton.style.display = "none";
+});
+
+const formRegister = document.querySelector(".formRegister");
+
+const register = document.querySelector(".register");
+
+register.addEventListener("click", () => {
+  if (formRegister.style.display == "block") {
+    formRegister.style.display = "none";
+  } else {
+    formRegister.style.display = "block";
+  }
+});
+const user = document.getElementById("user");
+const admin = document.getElementById("admin");
+user.addEventListener("click", () => {
+  console.log("esh akam");
+  window.location.replace("/contact.html");
+});
+admin.addEventListener("click", () => {
+  loginForm.style.display = "block"; // Show the login form when the button is clicked
+  loginForm.style.zIndex = "2";
 });

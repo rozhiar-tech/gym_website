@@ -622,3 +622,30 @@ ul li {
 .footer-nav ul li a:hover {
   text-decoration: underline;
 }
+
+.formRegister {
+  background-color: #23213d;
+  height: 150px;
+  width: 130px;
+  position: absolute;
+  left: 633px;
+  top: 100px;
+  display: none;
+}
+
+.insideDiv {
+  background-color: #23213d;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.btnText {
+  font-size: large;
+  font-weight: bold;
+}
+#loginButton {
+  display: none;
+}
