@@ -79,6 +79,7 @@
   <body>
     <header>
       <h1>Dashboard</h1>
+      <button id="logoutBtn">Logout</button>
     </header>
 
     <main>
@@ -94,6 +95,26 @@
             <!-- Emails will be dynamically added here -->
           </tbody>
         </table>
+      </section>
+      <!-- Add a new section in the main part of your HTML for creating new admins -->
+      <section>
+        <h2>Create New Admin</h2>
+        <form id="createAdminForm">
+          <input type="text" id="adminName" placeholder="Admin Name" required />
+          <input
+            type="email"
+            id="adminEmail"
+            placeholder="Admin Email"
+            required
+          />
+          <input
+            type="password"
+            id="adminPassword"
+            placeholder="Admin Password"
+            required
+          />
+          <button type="submit">Create Admin</button>
+        </form>
       </section>
 
       <section>
